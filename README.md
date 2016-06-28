@@ -8,9 +8,9 @@ See DFU-UTIL.README for license and source information
 ## Use
 After building the firmware source code, generate a flashpack by:
 
-1. ./create_flasher.sh [tag]
+`./create_flasher.sh [tag]`
 
-    where "tag" is an optional string that will be appended to the flashpack
+where "tag" is an optional string that will be appended to the flashpack
 filename.
 
 #License
