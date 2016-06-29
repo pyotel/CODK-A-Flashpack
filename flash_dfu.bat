@@ -71,11 +71,13 @@ goto:eof
   
 :flash
   echo.
-  echo ** Flashing Quark **
+  echo ** Flashing Quark and BLE **
   echo.
   %DFU% -a 2 -D %IMG%/quark.bin
     if !ERRORLEVEL! NEQ 0 goto:error
-  %DFU% -a 7 -D %IMG%/arc.bin -R
+  %DFU% -a 7 -D %IMG%/arc.bin
+    if !ERRORLEVEL! NEQ 0 goto:error
+  %DFU% -a 8 -R -D %IMG%/ble_core/image.bin
     if !ERRORLEVEL! NEQ 0 goto:error
 goto:eof
 

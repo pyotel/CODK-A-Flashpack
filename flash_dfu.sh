@@ -43,11 +43,12 @@ flash_bl() {
 flash() {
   echo "
 
-** Flashing Quark **
+** Flashing Quark and BLE **
 
 "
   $DFU -a 2 -D $IMG/quark.bin
-  $DFU -a 7 -D $IMG/arc.bin -R
+  $DFU -a 7 -D $IMG/arc.bin
+  $DFU -a 8 -R -D $IMG/ble_core/image.bin
 }
 
 trap_to_dfu() {

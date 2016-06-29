@@ -17,7 +17,7 @@ flasher=flashpack${tag}.zip
 
 # copy .bin and partition.conf files into flasher package
 rm -rf images
-mkdir images/
+cp -r images.dist images
 rsync -avm --include='*.bin' --include='*partition.conf' -f 'hide,! */' $fwdir/ images/firmware/
 
 # create flasher package
