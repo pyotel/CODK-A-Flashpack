@@ -26,4 +26,4 @@ if [ -n "$tag" ]; then
   rsync -rav --exclude='.git' --exclude='create_flasher.sh' arduino101_flashpack/ arduino101_flashpack${tag}
 fi
 rm -rf $flasher
-zip -r $flasher arduino101_flashpack${tag}/ -x *.git/*
+zip -r $flasher flashpack${tag}/ -x *.git/*
