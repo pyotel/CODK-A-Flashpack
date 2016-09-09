@@ -48,7 +48,7 @@ flash() {
 "
   $DFU -a 2 -D $IMG/quark.bin
   $DFU -a 7 -D $IMG/arc.bin
-  $DFU -a 8 -R -D $IMG/ble_core/image.bin
+  $DFU -a 8 -R -D $IMG/ble_core/imagev3.bin
 }
 
 trap_to_dfu() {
